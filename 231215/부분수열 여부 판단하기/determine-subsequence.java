@@ -21,18 +21,16 @@ public class Main {
     private static String isPossible() {
         int a=0;
         for(int b=0; b<M; b++) {
-            while(a<N) {
-                if(A[a] == B[b]) {
-                    a++;
-                    break;
-                }
-
+            while(a<N && A[a] != B[b]) {
+                // System.out.println("B : " + B[b] + ", A : " + A[a]);
                 a++;
             }
 
-            if(B[b] != A[a -1]) {
+            if(a == N) {
                 return "No";
             }
+
+            a++;
         }
 
 
