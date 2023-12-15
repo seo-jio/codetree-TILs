@@ -16,20 +16,20 @@ public class Main {
         int right = 0;
         int sum = 0;
 
-        for(int left=0; left<n; left++) {
-            while(right < n && sum < s) {
+        for(int left=1; left<=n; left++) {
+            while(right + 1 <= n && sum < s) {
                 sum += Integer.parseInt(temp[right++]);
             }
 
-            if(sum < s) {
+            if(right == n && sum < s) {
                 break;
             }
 
-            minLen = Integer.min(minLen, right - left);
+            minLen = Integer.min(minLen, right - left + 1);
             // System.out.println("length : " + (right - left) + ", sum : " + sum);
             sum -= Integer.parseInt(temp[left]);
         }
-
+        
         minLen = (minLen == Integer.MAX_VALUE) ? -1 : minLen;
         System.out.println(minLen);
     }
