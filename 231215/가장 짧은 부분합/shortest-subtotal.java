@@ -21,7 +21,7 @@ public class Main {
                 sum += Integer.parseInt(temp[right++]);
             }
 
-            if(right == n && sum < s) {
+            if(sum < s) {
                 break;
             }
 
@@ -29,7 +29,7 @@ public class Main {
             // System.out.println("length : " + (right - left) + ", sum : " + sum);
             sum -= Integer.parseInt(temp[left]);
         }
-        
+
         minLen = (minLen == Integer.MAX_VALUE) ? -1 : minLen;
         System.out.println(minLen);
     }
