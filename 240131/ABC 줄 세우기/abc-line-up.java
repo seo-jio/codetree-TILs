@@ -14,6 +14,10 @@ public class Main {
             }
         }
 
-        System.out.println(cnt + 1);
+        if(cnt == 0) {
+            System.out.println(0);
+        } else {
+            System.out.println(cnt + 1);
+        }
     }
 }
