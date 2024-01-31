@@ -13,7 +13,7 @@ public class Main {
         }
 
         int first = Math.abs(nums[0] - nums[1]);
-        int second = Math.abs(nums[0] - nums[2]) + Math.abs(nums[3] - nums[2]);
+        int second = Math.abs(nums[0] - nums[2]) + Math.abs(nums[3] - nums[1]);
         int third = Math.abs(nums[0] - nums[3]) + Math.abs(nums[2] - nums[1]);
 
         int min = Math.min(first, second);
