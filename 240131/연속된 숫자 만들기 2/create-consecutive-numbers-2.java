@@ -12,15 +12,24 @@ public class Main {
         }
         
         int stick = 0;
+        int diffTwo = 0;
+
         for(int i=0; i<nums.length -1; i++) {
             if(nums[i+1] - nums[i] == 1) {
                 stick++;
+            }
+
+            if(nums[i+1] - nums[i] == 2) {
+                diffTwo++;
             }
         }
 
         if(stick == 2) {
             System.out.println(0);
-        } else if(stick == 1) {
+            return;
+        }
+
+        if(diffTwo == 1) {
             System.out.println(1);
         } else {
             System.out.println(2);
