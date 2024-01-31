@@ -6,7 +6,6 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         String[] chars = br.readLine().split(" ");
-        Arrays.sort(chars);
 
         int cnt = 0;
         for(int i=0; i<chars.length - 1; i++) {
