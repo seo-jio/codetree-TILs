@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    static int[] parents, dp, weights;
+    static int[] dp, weights;
     static boolean[] visited;
     static int N;
     static List<Integer>[] edges;
@@ -11,7 +11,6 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
 
-        parents = new int[N+1];
         dp = new int[N+1];
         weights = new int[N+1];
         visited = new boolean[N+1];
@@ -31,7 +30,6 @@ public class Main {
             int cur = 2 + i;
             weights[cur] = (t == 1) ? a : -a;
 
-            parents[cur] = p;
             edges[p].add(cur);
         }
 
